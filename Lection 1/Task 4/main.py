@@ -1,5 +1,9 @@
 
 znak = input("select operation(+,-,*,/,**,!**)")
+def sum(a,b):
+    a = int(input("a = "))
+    b = int(input("b = "))
+    return a+b
 match znak :
     case str("+"):
         print("You selected add(a+b)")

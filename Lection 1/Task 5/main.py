@@ -1,4 +1,4 @@
-print("Enter a, b, c according to the pattern to solve the quadratic equation:a*x^2+b*x+c=t")
+print("Enter a, b, c according to the pattern to solve the quadratic equation:a*x^2+b*x+c=0")
 a = int(input("a = "))
 b = int(input("b = "))
 c = int(input("c = "))
