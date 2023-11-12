@@ -2,9 +2,7 @@ def pop():
     print("---"*18)
 index = 1
 number = int(input("to see how much you want to keep sacred values = "))#the number entered by the use
-lst=[]
-lst_prime_numbers=[]
-lst_dividers=[]
+lst,lst_prime_numbers,lst_dividers=[],[],[]
 numbers=0
 while index < (number+1) :#entry of numbers from 1 to the number entered by the user in the list
     numbers = numbers+1
