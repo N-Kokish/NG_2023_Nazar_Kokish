@@ -1,7 +1,15 @@
 import json
-g={}
-str_json={
-    "glossary": {
+def find_by_key(dictionary,looking_for_kei):
+    for dictionary_key, dictionary_value in dictionary.items():
+        if dictionary_key == looking_for_kei:
+            print("\nYour key has been found  \n {}:{}\n".format(looking_for_kei,dictionary_value))
+            return 
+        if type(dictionary_value) is dict:
+            find_by_key(dictionary_value, looking_for_kei)
+
+
+key_is_required = input("Enter the key by which you want to receive data: ")
+dictionary_json={ "glossary":{
         "title": "example glossary",
         "GlossDiv": {
             "title": "S",
@@ -23,8 +31,6 @@ str_json={
                 }
             }
         }
-    }
-}
+    }}
 
-number = str(input("to see how much you want to keep sacred values = "))
-print (type(str_json["glossary"]["GlossDiv"]))
+find_by_key(dictionary_json,key_is_required)
