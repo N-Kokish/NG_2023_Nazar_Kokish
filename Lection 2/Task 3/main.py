@@ -10,9 +10,9 @@ while index < (number+1) :#entry of numbers from 1 to the number entered by the 
     index=index+1
 index=0
 while index<len(lst):
-    for i in range(1, int(len(lst)+1)):
-     if (lst[index]) % i == 0:
-        lst_dividers.append(i)
+    for divider in range(1, int(len(lst)+1)):
+     if (lst[index]) % divider == 0:
+        lst_dividers.append(divider)
     print("\n{} | ".format(index+1),lst_dividers)
     if int(len(lst_dividers)) == 2:
        lst_prime_numbers.append(index+1)
