@@ -6,31 +6,8 @@ def find_by_key(dictionary,looking_for_kei):
             return 
         if type(dictionary_value) is dict:
             find_by_key(dictionary_value, looking_for_kei)
-
-
+file_name = input("Enter the name of the file in which there is json: ")
 key_is_required = input("Enter the key by which you want to receive data: ")
-dictionary_json={ "glossary":{
-        "title": "example glossary",
-        "GlossDiv": {
-            "title": "S",
-            "GlossList": {
-                "GlossEntry": {
-                    "ID": "SGML",
-                    "SortAs": "SGML",
-                    "GlossTerm": "Standard Generalized Markup Language",
-                    "Acronym": "SGML",
-                    "Abbrev": "ISO 8879:1986",
-                    "GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-                        "GlossSeeAlso": [
-                            "GML",
-                            "XML"
-                        ]
-                    },
-                    "GlossSee": "markup"
-                }
-            }
-        }
-    }}
-
+with open(file_name, "r") as file:
+    dictionary_json = json.loads(file.read())
 find_by_key(dictionary_json,key_is_required)
